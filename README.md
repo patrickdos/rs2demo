@@ -30,11 +30,11 @@ Having an RS2/S3 account and having created a bucket .
 By default the endpoint is configured to talk with the Scality RS2 Demo platform .
 If you wanna link with another platform you have to modify the following files :
 
-sed 's/demo.scality.com/<endpoint>/' server/php/awssdk.php
+	sed 's/demo.scality.com/<endpoint>/' server/php/awssdk.php
+	
+	sed 's/demo.scality.com/<endpoint>/' server/php/services/s3.class.php
 
-sed 's/demo.scality.com/<endpoint>/' server/php/services/s3.class.php
-
-sed 's/demo.scality.com/<endpoint>/' server/php/login.post.php
+	sed 's/demo.scality.com/<endpoint>/' server/php/login.post.php
 
 System Dependancies:
 
