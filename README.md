@@ -72,7 +72,9 @@ Microsoft Internet Explorer has no support for multiple file selection or upload
 ## TODO
 
 Handling more than 1000 files with paging .
+
 Managing the virtual folders .
+
 Be able to create/select/change the bucket .
 
 ## License
