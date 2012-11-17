@@ -27,7 +27,11 @@ function getFileInfo($bucket, $fileName ,$size) {
     $fileArray = "";
     $furl = "http://" . $bucket . ".demo.scality.com/" . $fileName;  
     $fileArray['name'] = $fileName;
-    $fileArray['size'] = $size;
+    if( $size == "tobechanged" )
+	$fileArray['size'] = $s3->get_object_filesize($bucket, $fileName);	
+    else
+    	$fileArray['size'] = $size;
+	
     $fileArray['url'] = $furl;
     $fileArray['thumbnail'] = $furl;
     $fileArray['delete_url'] = "server/php/index.php?file=" . $fileName;
@@ -67,7 +71,7 @@ function uploadFiles($bucket, $prefix="") {
             $fileName = $prefix.str_replace(" ", "_", $fileName);
             $response = $s3->create_object($bucket, $fileName, array('fileUpload' => $fileTempName, 'acl' => AmazonS3::ACL_PUBLIC,));
             if ($response->isOK()) {
-                $info[] = getFileInfo($bucket, $fileName);
+                $info[] = getFileInfo($bucket, $fileName,"tobechanged");
             } else {
                 //     echo "<strong>Something went wrong while uploading your file... sorry.</strong>";
                 
@@ -78,9 +82,9 @@ function uploadFiles($bucket, $prefix="") {
             $fileTempName = $upload['tmp_name'];
             $fileName = (isset($_SERVER['HTTP_X_FILE_NAME']) ? $_SERVER['HTTP_X_FILE_NAME'] : $upload['name']);
             $fileName =  $prefix.str_replace(" ", "_", $fileName);
-            $response = $s3->create_object($bucket, $fileName, array('fileUpload' => $fileTempName, 'acl' => AmazonS3::ACL_PUBLIC, 'meta' => array('keywords' => 'example, test'),));
+            $response = $s3->create_object($bucket, $fileName, array('fileUpload' => $fileTempName, 'acl' => AmazonS3::ACL_PUBLIC,));
             if ($response->isOK()) {
-                $info[] = getFileInfo($bucket, $fileName);
+                $info[] = getFileInfo($bucket, $fileName,"tobechanged");
             } else {
                 //     echo "<strong>Something went wrong while uploading your file... sorry.</strong>";
                 
