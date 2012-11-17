@@ -1,12 +1,37 @@
-# RS2 Demo Platform v1.0
+# RS2/S3 Web Interface v1.0
 
-## Demo
+## Info
 
-A Demo Web Interface will be available soon 
+The RS2 Web Interface allows accessing your data stored with your S3/RS2 account from everywhere .
+A lot of companies provide this services :
+	-HostEurope
+	-Tiscali
+	-SeeWeb
+	-Amazon S3
+	-Connectria
+	-GreenQloud
+	......and many others 
 
-## Setup
+The files pushed with any kind of client can be accessed and downloaded through the Web Interface helps by the signature Url .
 
-The installation instructions will be coming soon
+## Requirements
+
+Having an RS2/S3 account and having created a bucket .
+
+## Installations
+
+By default the endpoint is configured to talk with the Scality RS2 Demo platform .
+If you wanna link with another platform you have to modify the following files :
+
+sed 's/demo.scality.com/<endpoint>/' server/php/awssdk.php
+sed 's/demo.scality.com/<endpoint>/' server/php/services/s3.class.php
+sed 's/demo.scality.com/<endpoint>/' server/php/login.post.php
+
+System Dependancies:
+	-Apache2 + php5
+	-php-mhash
+	-php-curl
+	-php-pecl-json
 
 ##Browsers
 Desktop browsers
@@ -30,6 +55,12 @@ The File Upload plugin has been tested with and supports the following mobile br
 
 Drag & Drop is only supported on Google Chrome, Firefox 4.0+, Safari 5.0+ and Opera 12.0+.  
 Microsoft Internet Explorer has no support for multiple file selection or upload progress.  
+
+## TODO
+
+Handling more than 1000 files with paging .
+Managing the virtual folders .
+Be able to create/select/change the bucket .
 
 ## License
 Released under the [MIT license](http://www.opensource.org/licenses/MIT).
