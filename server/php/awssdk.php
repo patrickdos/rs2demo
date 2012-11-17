@@ -65,7 +65,7 @@ function uploadFiles($bucket, $prefix="") {
             $fileTempName = $upload['tmp_name'][$index];
             $fileName = (isset($_SERVER['HTTP_X_FILE_NAME']) ? $_SERVER['HTTP_X_FILE_NAME'] : $upload['name'][$index]);
             $fileName = $prefix.str_replace(" ", "_", $fileName);
-            $response = $s3->create_object($bucket, $fileName, array('fileUpload' => $fileTempName, 'acl' => AmazonS3::ACL_PUBLIC, 'meta' => array('keywords' => 'example, test'),));
+            $response = $s3->create_object($bucket, $fileName, array('fileUpload' => $fileTempName, 'acl' => AmazonS3::ACL_PUBLIC,));
             if ($response->isOK()) {
                 $info[] = getFileInfo($bucket, $fileName);
             } else {
