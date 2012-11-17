@@ -6,6 +6,7 @@ The RS2 Web Interface allows accessing your data stored with your S3/RS2 account
 A lot of companies provide this services :
 
 	*HostEurope
+	*Nifty
 	*Tiscali
 	*SeeWeb
 	*Amazon S3
