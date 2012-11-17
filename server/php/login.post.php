@@ -16,7 +16,6 @@ $httpDate = gmdate("D, d M Y H:i:s O", time()) ;
 $stringToSign = "$method\n$contentMD5\n$contentType\n$httpDate\n$aclHeaderToSign$resource";
 $signature =  base64_encode(mhash(MHASH_SHA1,$stringToSign,$loginPassword));
 
-//print $stringToSign ; 
 $uri = "$host$resource";
 $curl = curl_init(); 
 $header[] = "Authorization: AWS $loginUsername:$signature" ; 

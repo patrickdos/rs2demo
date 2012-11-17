@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION["Token"]) || $_SESSION["Token"] == "")
 {
-    header ('Location: login.php');
+    header ('Location: ./login.php');
     exit();
 }
 ?>
