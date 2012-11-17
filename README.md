@@ -4,6 +4,7 @@
 
 The RS2 Web Interface allows accessing your data stored with your S3/RS2 account from everywhere .
 A lot of companies provide this services :
+
 	-HostEurope
 
 	-Tiscali
@@ -36,6 +37,7 @@ sed 's/demo.scality.com/<endpoint>/' server/php/services/s3.class.php
 sed 's/demo.scality.com/<endpoint>/' server/php/login.post.php
 
 System Dependancies:
+
 	-Apache2 + php5
 
 	-php-mhash
