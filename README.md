@@ -1,14 +1,15 @@
-# RS2 Demo Platform
+# RS2 Demo Platform v1.0
 
 ## Demo
-[Demo Upload]
+
+A Demo Web Interface will be available soon 
 
 ## Setup
 
-## Support
+The installation instructions will be coming soon
 
 ## Browsers
-The File Upload plugin is regularly tested with the latest browser versions and supports the following minimal versions:
+The Web Interface supports the following minimal versions:
 
 * Google Chrome - 7.0+
 * Apple Safari - 4.0+
