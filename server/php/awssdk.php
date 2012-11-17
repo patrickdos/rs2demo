@@ -24,15 +24,22 @@ $s3 = new AmazonS3($login,$pass);
 
 function getFileInfo($bucket, $fileName ,$size) {
     global $s3;
+    global $login;
+    global $pass;
+
+    $timestamp = strtotime("+3 days");
+    $strtosign = "GET\n\n\n$timestamp\n/$bucket/$fileName";
+    $signature = urlencode(base64_encode(hash_hmac("sha1", utf8_encode($strtosign), $pass, true)));
+
     $fileArray = "";
-    $furl = "http://" . $bucket . ".demo.scality.com/" . $fileName;  
+    $furl = "http://" . $bucket . ".demo.scality.com/" . $fileName."?AWSAccessKeyId=$login&Expires=$timestamp&Signature=$signature";
     $fileArray['name'] = $fileName;
     if( $size == "tobechanged" )
 	$fileArray['size'] = $s3->get_object_filesize($bucket, $fileName);	
     else
     	$fileArray['size'] = $size;
 	
-    $fileArray['url'] = $furl;
+    $fileArray['url'] = $furl ;
     $fileArray['thumbnail'] = $furl;
     $fileArray['delete_url'] = "server/php/index.php?file=" . $fileName;
     $fileArray['delete_type'] = "DELETE";
@@ -116,3 +123,4 @@ function deleteFiles($bucket) {
     return $success;
 }
 ?>
+

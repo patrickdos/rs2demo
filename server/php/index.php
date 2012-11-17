@@ -13,8 +13,6 @@
 error_reporting(E_ALL | E_STRICT);
 
 require('awssdk.php');
-//$bucket = "jquery";
-//$subFolder = "";  // leave blank for upload into the bucket directly
 
 
 header('Pragma: no-cache');
