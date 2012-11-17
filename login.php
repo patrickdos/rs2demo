@@ -1,85 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign in &middot; RS2 Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<html xmlns="http://www.w3.org/1999/xhtml"> 
-	<head>		
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />		
-		<title>Scality Accounting</title>
-
-		<!-- Reset Stylesheet -->
-		<link rel="stylesheet" href="resources/css/reset.css" type="text/css" media="screen" />	  
-		<!-- Main Stylesheet -->
-		<link rel="stylesheet" href="resources/css/style.css" type="text/css" media="screen" />		
-		<!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
-		<link rel="stylesheet" href="resources/css/invalid.css" type="text/css" media="screen" />	
-		<link rel="stylesheet" href="resources/css/blue.css" type="text/css" media="screen" />		
-		<!-- Internet Explorer Fixes Stylesheet -->		
-		<!--[if lte IE 7]>
-			<link rel="stylesheet" href="resources/css/ie.css" type="text/css" media="screen" />
-		<![endif]-->
-		
-		<!--                       Javascripts                       -->	  
-		<!-- jQuery -->
-		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
     <!-- Login Session -->
     <script type="text/javascript" src="js/jquery.login.js"></script>
-		<!-- jQuery Configuration -->
-		<!-- Internet Explorer .png-fix -->		
-		<!--[if IE 6]>
-			<script type="text/javascript" src="js/DD_belatedPNG_0.0.7a.js"></script>
-			<script type="text/javascript">
-				DD_belatedPNG.fix('.png_bg, img, li');
-			</script>
-		<![endif]-->
-		
-	</head>
-  
-	<body id="login">
-		
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] 
+      .form-signin input[type="text"] {
+        font-size: 15px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
 		<div id="login-wrapper" class="png_bg">
 			<div id="login-top">		
-				<h1>Er</h1>
 				<!-- Logo (221px width) -->
-				<img src="./resources/images/logo.png">
-			</div> <!-- End #logn-top -->
-			
-			<div id="login-content">
-				
-				<form method="post" action="" id="login_form">
-					 <center><span id="spnmsg" style="display:none"></span></center>
-					  <br />
-					<p>
-						<label>Login</label>
-						<input class="text-input" type="text" name="txtUsername" id="txtUsername"/>
-					</p>
-					<div class="clear"></div>
-					<p>
-						<label>Password</label>
-						<input class="text-input" type="password" name="txtPassword" id="txtPassword"/>
-					</p>
+				<center><img src="./resources/images/logo.png"></center>
+		</div> <!-- End #logn-top -->
 
-					<div class="clear"></div>
-				        <p>
-                                                <label>Bucket</label>
-                                                <input class="text-input" type="text" name="txtBucket" id="txtBucket"/>
-                                        </p>
+    <div class="container">
 
-					<div class="clear"></div>
-					<p>
-						<input class="button" type="submit" value="Connection" style="text-decoration:none"/>
-					</p>
-					
-				</form>
+      <form class="form-signin" method="post" action="" id="login_form" >
+        <h2 class="form-signin-heading">Please log in</h2>
+	<center><span id="spnmsg" style="display:none"></span></center>
+        <input type="text" class="input-block-level" placeholder="AccessKey" id="txtUsername">
+        <input type="password" class="input-block-level" placeholder="SecretKey" id="txtPassword">
+        <input type="text" class="input-block-level" placeholder="Bucket" id="txtBucket">
+        <button class="btn btn-large btn-primary" type="submit">Submit</button>
+      </form>
 
-			</div> <!-- End #login-content -->
-			
-		</div> <!-- End #login-wrapper -->
-		
+    </div> <!-- /container -->
+
+
   </body>
-  
 </html>
-
-<script type="text/javascript">
-document.getElementById('txtUsername').focus();
-document.getElementById('txtUsername').select();
-
