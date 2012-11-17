@@ -25,11 +25,9 @@ By default the endpoint is configured to talk with the Scality RS2 Demo platform
 If you wanna link with another platform you have to modify the following files :
 
 
-`sed 's/demo.scality.com/<endpoint>/' server/php/awssdk.php`
-
-`sed 's/demo.scality.com/<endpoint>/' server/php/services/s3.class.php`
-
-`sed 's/demo.scality.com/<endpoint>/' server/php/login.post.php`
+    `sed 's/demo.scality.com/<endpoint>/' server/php/awssdk.php`
+    `sed 's/demo.scality.com/<endpoint>/' server/php/services/s3.class.php`
+    `sed 's/demo.scality.com/<endpoint>/' server/php/login.post.php`
 
 
 System Dependancies:
@@ -42,9 +40,8 @@ System Dependancies:
 
 Edit the php.ini file to increase the file upload filesize
 
-`file_uploads = On`
-
-`upload_max_filesize = 1000M`
+    `file_uploads = On`
+    `upload_max_filesize = 1000M`
 
 
 ##Browsers
@@ -72,9 +69,9 @@ Microsoft Internet Explorer has no support for multiple file selection or upload
 
 ## TODO
 
-*Handling more than 1000 files with paging .
-*Managing the virtual folders .
-*Be able to create/select/change the bucket .
+    *Handling more than 1000 files with paging .
+    *Managing the virtual folders .
+    *Be able to create/select/change the bucket .
 
 ## License
 Released under the [MIT license](http://www.opensource.org/licenses/MIT).
