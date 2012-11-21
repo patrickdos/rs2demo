@@ -67,7 +67,7 @@ if(!isset($_SESSION["Token"]) || $_SESSION["Token"] == "")
     </div>
     <blockquote>
         <p>File Upload widget with multiple file selection, drag&amp;drop support, progress bars and preview images <br>
-        <p>Download and deletes are allowed <br>
+        <p>Downloads and deletes are allowed <br>
     </blockquote>
     <br>
     <!-- The file upload form used as target for the file upload widget -->
