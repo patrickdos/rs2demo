@@ -17,7 +17,7 @@ A lot of companies provide this services :
 
 The files pushed with any kind of client can be accessed and downloaded through the Web Interface helps by the signature Url .
 
-##Demo Interace
+##Demo Interface
 
 http://demo.scality.com:5443/demo/
 
