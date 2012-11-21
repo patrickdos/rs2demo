@@ -21,9 +21,9 @@ The files pushed with any kind of client can be accessed and downloaded through 
 
 http://demo.scality.com:5443/demo/
 
-     AccesKey: demo
-     SecretKey : demopass
-     bucket : demos
+     AccesKey	: demo
+     SecretKey 	: demopass
+     bucket 	: demos
 
 ## Requirements
 
