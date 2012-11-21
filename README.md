@@ -1,4 +1,4 @@
-# RS2/S3 Web Interface v1.0
+# RS2/S3 Scality Web Interface v1.0
 
 ## Info
 
@@ -6,6 +6,7 @@ The RS2 Web Interface allows accessing your data stored with your S3/RS2 account
 A lot of companies provide this services :
 
 	*HostEurope
+	*Scality
 	*Nifty
 	*Tiscali
 	*SeeWeb
@@ -15,6 +16,14 @@ A lot of companies provide this services :
 	*......and many others 
 
 The files pushed with any kind of client can be accessed and downloaded through the Web Interface helps by the signature Url .
+
+##Demo Interace
+
+http://demo.scality.com:5443/demo/
+
+AccesKey: demo
+SecretKey : demopass
+bucket : demos
 
 ## Requirements
 
