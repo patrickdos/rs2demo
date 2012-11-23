@@ -7,8 +7,23 @@ $bucket = isset($_POST["bucket"]) ? $_POST["bucket"] : "" ;
 
 if ( $_POST["un"] == "" || $_POST["pa"] == "" || $_POST["bucket"] == "" )
 	{
-	echo "AccessKey ,secretKey or bucket can't be empty";
-	exit(0) ;
+	if ($_POST["un"] == "" )
+		{
+		echo "The AccessKey can't be empty";
+		exit(0) ;
+		}
+	if ($_POST["pa"] == "" )	
+		{
+		echo "The SecretKey can't be empty";
+                exit(0) ;
+		}
+
+	if ($_POST["bucket"] == "" )
+                {       
+                echo "The Bucket can't be empty";
+                exit(0) ;
+                }
+
 	}
 
 if ( $_POST["bucket"] == "/"  )	
