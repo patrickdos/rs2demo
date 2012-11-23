@@ -6,22 +6,15 @@ $(document).ready(function(){
 				if(response=="success")
 				{
 					$("#spnmsg").fadeTo(200,0.1,function(){
-						$(this).html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Authentication successfull<br /><br />").addClass('logging').fadeTo(900,1,function(){
+						$(this).html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Authentication successful<br /><br />").addClass('logging').fadeTo(900,1,function(){
 							document.location='./index.php';
 						});
 					});
 				}
-				else if(response=="true")
+				else 
 				{
 					$("#spnmsg").fadeTo(200,0.1,function(){
-						$(this).html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User disabled.<br /><br />").removeClass().addClass('error3').fadeTo(900,1);
-						$("#txtUsername").focus();
-					});
-				}				
-				else if(response=="false")
-				{
-					$("#spnmsg").fadeTo(200,0.1,function(){
-						$(this).html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bad login or password.<br /><br />").removeClass().addClass('error2').fadeTo(900,1);
+						$(this).html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+response+".<br /><br />").removeClass().addClass('error2').fadeTo(900,1);
 						$("#txtUsername").focus();
 					});
 				}
