@@ -10,6 +10,12 @@ if ( $_POST["un"] == "" || $_POST["pa"] == "" || $_POST["bucket"] == "" )
 	echo "AccessKey ,secretKey or bucket can't be empty";
 	exit(0) ;
 	}
+
+if ( $_POST["bucket"] == "/"  )	
+	{
+	echo "Bucket with a slash is not allowed";
+	exit(0) ;
+	}
 	
 
 require_once 'sdk.class.php';
